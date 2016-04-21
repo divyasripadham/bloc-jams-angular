@@ -20,6 +20,10 @@
                url: '/collection',
                controller: 'CollectionCtrl as collection',
                templateUrl: '/templates/collection.html'
+           })
+           .state('player_bar', {
+               controller: 'PlayerBarCtrl as player_bar',
+               templateUrl: '/templates/player_bar.html'
            });
      }
 
