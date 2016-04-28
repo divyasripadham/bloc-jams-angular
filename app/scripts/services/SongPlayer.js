@@ -34,6 +34,7 @@
             });
 
             SongPlayer.currentSong = song;
+            SongPlayer.setVolume(SongPlayer.volume);
         };
 
         /**
@@ -62,6 +63,7 @@
         */
         SongPlayer.currentSong = null;
         SongPlayer.currentTime = null;
+        SongPlayer.volume = 50;
 
         SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
@@ -113,6 +115,12 @@
         SongPlayer.setCurrentTime = function(time){
             if(currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function(volume){
+            if(currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
             }
         };
 
